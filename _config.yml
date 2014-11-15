@@ -13,7 +13,6 @@ link: "http://kazamatsuri.org/"
 owner_name: Aspirety
 owner_email: aspirety@kazamatsuri.org
 twitter_username: KazamatsuriOrg
-github_username:  uppfinnarn
 
 # Paths, don't change these
 baseurl: "" # the subpath of your site, e.g. /blog/
