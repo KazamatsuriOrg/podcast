@@ -7,6 +7,16 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
+  
+  <div class="post-audio">
+    <audio src="{{ page.link }}" id="audio" class="audio" controls>
+      <p>Your browser does not support HTML5 Audio.</p>
+    </audio>
+    
+    <div class="links">
+      <a href="{{ page.link }}" target="_blank" class="download mp3">Download MP3</a>
+    </div>
+  </div>
 
   <article class="post-content">
     {{ content }}
