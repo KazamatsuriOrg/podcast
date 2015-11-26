@@ -1,0 +1,25 @@
+a[data-player-play] {
+    cursor: pointer;
+}
+
+#player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #999;
+    padding: 5px 0;
+}
+
+#player-content {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    margin-right: auto;
+    margin-left: auto;
+    
+    .player-button {
+        color: #000;
+        font-size: 60px;
+    }
+}
