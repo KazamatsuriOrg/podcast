@@ -34,7 +34,9 @@ layout: null
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        <enclosure url="{{ post.link }}" length="{( post.length }}" type="audio/mpeg" />
+        {% for type in site.audio_types %}
+          <enclosure url="{{ post.id | uri_escape | prepend: site.audio_baseurl }}.{{ type.ext }}" length="{{ post.length }}" type="{{ type.mime }}" />
+        {% endfor %}
       </item>
     {% endfor %}
   </channel>

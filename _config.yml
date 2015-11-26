@@ -7,6 +7,13 @@ description: > # this means to ignore newlines until "baseurl:"
   Podcast of the Kazamatsuri community. We are a home for fans of Key's works dedicated to covering all the latest Key news and analysing and discussing their stories together.
 link: "http://kazamatsuri.org/"
 
+# Audio source settings
+audio_baseurl: "http://kazamatsuri.org/podcast/"
+audio_types:
+  - name: MP3
+    ext: mp3
+    mime: audio/mpeg
+
 # Contact information
 owner_name: Aspirety
 owner_email: aspirety@kazamatsuri.org

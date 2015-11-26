@@ -2,7 +2,7 @@
 layout: post
 title:  "AIR Bookclub Part 5: Summer Route"
 date:   2015-04-28 04:11:00
-link: http://kazamatsuri.org/podcast/kazamatsuri-podcast-air-bookclub-5.mp3
+id: kazamatsuri-podcast-air-bookclub-5
 length: 119029760
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "AIR Bookclub Part 3: Kano Route"
 date:   2015-03-23 00:55:00
-link: http://kazamatsuri.org/podcast/kazamatsuri-podcast-air-bookclub-3.mp3
+id: kazamatsuri-podcast-air-bookclub-3
 length: 56201216		 
 ---
 

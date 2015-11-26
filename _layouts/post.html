@@ -9,12 +9,18 @@ layout: default
   </header>
   
   <div class="post-audio">
-    <audio src="{{ page.link }}" id="audio" class="audio" controls>
+    <audio id="audio" class="audio" controls>
+      {% for type in site.audio_types %}
+        <source src="{{ page.id | prepend: site.audio_baseurl }}.{{ type.ext }}" type="{{ type.mime }}" />
+      {% endfor %}
       <p>Your browser does not support HTML5 Audio.</p>
     </audio>
     
     <div class="links">
-      <a href="{{ page.link }}" target="_blank" class="download mp3">Download MP3</a>
+      Download:
+      {% for type in site.audio_types %}
+        <a href="{{ page.id | prepend: site.audio_baseurl }}.{{ type.ext }}" target="_blank" class="download {{ type.ext }}">{{ type.name }}</a>
+      {% endfor %}
     </div>
   </div>
 

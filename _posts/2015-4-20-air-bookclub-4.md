@@ -2,7 +2,7 @@
 layout: post
 title:  "AIR Bookclub Part 4: Misuzu Route"
 date:   2015-04-20 00:55:00
-link: http://kazamatsuri.org/podcast/kazamatsuri-podcast-air-bookclub-4.mp3
+id: kazamatsuri-podcast-air-bookclub-4
 length: 116256768		 
 ---
 

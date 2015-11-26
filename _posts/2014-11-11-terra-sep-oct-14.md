@@ -2,7 +2,7 @@
 layout: post
 title:  "The Monthly Terra September/October 2014"
 date:   2014-11-11 07:37:02
-link: http://kazamatsuri.org/podcast/Kazamatsuri%20Podcast%20-%20The%20Monthly%20Terra%20SepOct%2014.mp3
+id: Kazamatsuri Podcast - The Monthly Terra SepOct 14
 length: 32247808
 ---
 
