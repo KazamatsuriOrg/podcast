@@ -1,6 +1,6 @@
 app.controller('PlayerController', ['sound', function(sound) {
   this.sound = null;
-  this.title = "Title goes here";
+  this.title = "";
   this.state = 'stopped';
   
   this.load = function(id, title) {
