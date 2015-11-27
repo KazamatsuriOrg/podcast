@@ -2,14 +2,11 @@
   <div id="player-content">
     <h2 class="player-title" ng-bind="player.getTitle()"></h2>
     
-    <div ng-show="player.state == 'loading'">
-      <h2 class="player-msg">Loading...</h2>
-    </div>
-    <div ng-show="player.state == 'error'">
-      <h2 class="player-msg">An error occurred!</h2>
+    <div ng-show="player.getMsg()">
+      <h2 class="player-msg" ng-bind="player.getMsg()"></h2>
     </div>
     
-    <div class="player-controls">
+    <div class="player-controls" ng-show="player.getShowControls()">
       <div ng-show="player.state == 'playing'">
         <a class="player-button" ng-click="player.pause();"><i class="fa fa-pause-circle"></i></a>
       </div>

@@ -15,46 +15,38 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
     }
     
     var _this = this;
-    this.sound = sound(id);
-    this.sound.on('load', function() {
-      console.log("Loaded");
-      _this.play();
-      $scope.$apply();
-    });
-    this.sound.on('loaderror', function(_, err) {
-      console.log("Load Error", err);
+    sound(id).then(function(sound) {
+      
+      sound.addEventListener('play', function() {
+        _this.state = 'playing';
+        $scope.$apply();
+      });
+      sound.addEventListener('pause', function() {
+        _this.state = 'paused';
+        $scope.$apply();
+      });
+      sound.addEventListener('ended', function() {
+        _this.state = 'stopped';
+        $scope.$apply();
+      });
+      
+      _this.sound = sound;
+      _this.sound.play();
+    }, function(err) {
+      console.error(err);
       _this.state = 'error';
-      _this.error = err;
-      $scope.$apply();
     });
-    this.sound.on('play', function() {
-      console.log("Play");
-      _this.state = 'playing';
-      $scope.$apply();
-    });
-    this.sound.on('pause', function() {
-      console.log("Pause");
-      _this.state = 'paused';
-      $scope.$apply();
-    });
-    this.sound.on('stop', function() {
-      console.log("Stop");
-      _this.state = 'stopped';
-      $scope.$apply();
-    });
-    this.sound.on('end', function() {
-      console.log("End");
-      _this.state = 'stopped';
-      $scope.$apply();
-    });
+    
     $scope.$apply();
   }
   
   this.play = function() {
+    console.log("-> Play", this.sound);
     this.sound.play();
   }
   
   this.pause = function() {
+    console.log("-> Pause", this.sound);
     this.sound.pause();
   }
   
@@ -62,5 +54,17 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
     if (this.state != 'loading' && this.state != 'error') {
       return this.title;
     }
+  }
+  
+  this.getMsg = function() {
+    if (this.state == 'loading') {
+      return "Loading...";
+    } else if (this.state == 'error') {
+      return "An error occurred.";
+    }
+  }
+  
+  this.getShowControls = function() {
+    return this.state != 'loading' && this.state != 'error';
   }
 }]);
