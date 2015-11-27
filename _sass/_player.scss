@@ -28,7 +28,14 @@ a[data-play] {
     }
     
     .player-controls {
-        line-height: 0;
+        .left {
+            line-height: 1em;
+            float: left;
+        }
+        .right {
+            overflow: hidden;
+            padding-left: 10px;
+        }
     }
     
     .player-button {
