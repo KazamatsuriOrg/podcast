@@ -47,6 +47,7 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
       _this.state = 'stopped';
       $scope.$apply();
     });
+    $scope.$apply();
   }
   
   this.play = function() {
@@ -55,5 +56,11 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
   
   this.pause = function() {
     this.sound.pause();
+  }
+  
+  this.getTitle = function() {
+    if (this.state != 'loading' && this.state != 'error') {
+      return this.title;
+    }
   }
 }]);
