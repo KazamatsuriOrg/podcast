@@ -7,6 +7,12 @@ app.controller('PlayerController', ['sound', function(sound) {
     this.state = 'loading';
     this.title = title;
     
+    if (this.sound) {
+      this.sound.stop();
+      this.sound = null;
+      this.title = "";
+    }
+    
     var _this = this;
     sound(id).then(function(sound) {
       _this.sound = sound;
