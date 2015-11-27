@@ -2,7 +2,7 @@
 function playClickHandler() {
   var playerElement = document.getElementById('player');
   var player = angular.element(playerElement).scope().player;
-  player.load($(this).data('play'));
+  player.load($(this).data('play'), $(this).data('play-title'));
 }
 $(document).on('ready pjax:end', function() {
   $('[data-play]').click(playClickHandler);

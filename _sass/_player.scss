@@ -18,6 +18,14 @@ a[data-play] {
     margin-right: auto;
     margin-left: auto;
     
+    .player-title {
+        margin-bottom: 0;
+    }
+    
+    .player-controls {
+        line-height: 0;
+    }
+    
     .player-button {
         color: #000;
         font-size: 60px;
