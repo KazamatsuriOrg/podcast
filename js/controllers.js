@@ -1,0 +1,27 @@
+app.controller('PlayerController', ['sound', function(sound) {
+  this.sound = null;
+  this.state = 'stopped';
+  
+  this.load = function(id) {
+    this.state = 'loading';
+    
+    var _this = this;
+    sound(id).then(function(sound) {
+      _this.sound = sound;
+      _this.play();
+    }, function(err) {
+      _this.state = 'error';
+      _this.error = err;
+    });
+  }
+  
+  this.play = function() {
+    this.state = 'playing';
+    this.sound.play();
+  }
+  
+  this.pause = function() {
+    this.state = 'paused';
+    this.sound.pause();
+  }
+}]);
