@@ -1,7 +1,7 @@
 <div id="player" ng-controller="PlayerController as player">
   <div id="player-content">
     <div ng-show="player.getMsg()">
-      <h2 class="player-msg" ng-bind="player.getMsg()"></h2>
+      <h2 class="player-msg">[[ player.getMsg() ]]</h2>
     </div>
     
     <div class="player-controls" ng-show="player.getShowControls()">
@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="right">
-        <h2 class="player-title" ng-bind="player.getTitle()"></h2>
+        <h2 class="player-title">[[ player.getTitle() ]]</h2>
       </div>
     </div>
   </div>
