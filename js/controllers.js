@@ -1,6 +1,7 @@
 app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
   this.sound = null;
-  this.title = "";
+  this.title = "Test title";
+  
   this.state = 'stopped';
   this.error = "";
   
