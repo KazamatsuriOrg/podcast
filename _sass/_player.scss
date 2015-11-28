@@ -45,5 +45,10 @@ a[data-play] {
     .player-button {
         color: #000;
         font-size: 60px;
+        
+        
+        &.small {
+            font-size: 30px;
+        }
     }
 }

@@ -30,6 +30,7 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
       });
       sound.addEventListener('ended', function() {
         _this.state = 'stopped';
+        _this.sound = null;
         $scope.$apply();
       });
       sound.addEventListener('timeupdate', function() {
@@ -60,6 +61,12 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
   this.pause = function() {
     console.log("-> Pause", this.sound);
     this.sound.pause();
+  }
+  
+  this.stop = function() {
+    console.log("-> Stop", this.sound);
+    this.sound.pause();
+    this.sound = null;
   }
   
   this.getTitle = function() {

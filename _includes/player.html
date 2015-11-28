@@ -6,12 +6,9 @@
     
     <div class="player-controls" ng-show="player.getShowControls()">
       <div class="left">
-        <div ng-show="player.state == 'playing'">
-          <a class="player-button" ng-click="player.pause();"><i class="fa fa-pause-circle"></i></a>
-        </div>
-        <div ng-show="player.state == 'paused' || player.state == 'stopped'">
-          <a class="player-button" ng-click="player.play();"><i class="fa fa-play-circle"></i></a>
-        </div>
+        <a class="player-button" ng-click="player.pause();" ng-show="player.state == 'playing'"><i class="fa fa-pause-circle"></i></a>
+        <a class="player-button" ng-click="player.play();" ng-show="player.state != 'playing'"><i class="fa fa-play-circle"></i></a>
+        <a class="player-button small" ng-click="player.stop();"><i class="fa fa-stop-circle"></i></a>
       </div>
       <div class="right">
         <h2 class="player-title">[[ player.getTitle() ]]</h2>
