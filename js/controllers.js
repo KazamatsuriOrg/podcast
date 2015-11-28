@@ -3,6 +3,8 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
   this.title = "Test title";
   
   this.state = 'stopped';
+  this.position = 0;
+  this.duration = 0;
   this.error = "";
   
   this.load = function(id, title) {
@@ -29,6 +31,15 @@ app.controller('PlayerController', ['$scope', 'sound', function($scope, sound) {
       sound.addEventListener('ended', function() {
         _this.state = 'stopped';
         $scope.$apply();
+      });
+      sound.addEventListener('timeupdate', function() {
+        var newPosition = Math.round(_this.sound.currentTime);
+        var newDuration = Math.round(_this.sound.duration);
+        if (newPosition != _this.position || newDuration != _this.duration) {
+          _this.position = newPosition;
+          _this.duration = newDuration;
+          $scope.$apply();
+        }
       });
       
       _this.sound = sound;

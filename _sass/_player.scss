@@ -35,6 +35,10 @@ a[data-play] {
         .right {
             overflow: hidden;
             padding-left: 10px;
+            
+            progress {
+                width: 100%;
+            }
         }
     }
     

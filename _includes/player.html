@@ -15,6 +15,7 @@
       </div>
       <div class="right">
         <h2 class="player-title">[[ player.getTitle() ]]</h2>
+        <progress ng-show="player.getTitle()" value="[[ player.position ]]" max="[[ player.duration || 99999 ]]"></progress>
       </div>
     </div>
   </div>
