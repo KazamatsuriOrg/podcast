@@ -1,4 +1,4 @@
-<div id="player" ng-controller="PlayerController as player">
+<div id="player" ng-controller="PlayerController as player" ng-show="player.sound">
   <div id="player-content">
     <div ng-show="player.getMsg()">
       <h2 class="player-msg">[[ player.getMsg() ]]</h2>
