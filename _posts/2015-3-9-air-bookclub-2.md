@@ -2,7 +2,7 @@
 layout: post
 title:  "AIR Bookclub Part 2: Minagi Route"
 date:   2015-03-09 05:57:00
-id: kazamatsuri-podcast-air-bookclub-2
+fileid: kazamatsuri-podcast-air-bookclub-2
 length: 116948992 
 ---
 

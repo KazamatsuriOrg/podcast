@@ -10,9 +10,9 @@ layout: default
   
   <div class="post-audio">
     <div class="links">
-      <a data-play="{{ page.id }}" data-play-title="{{ page.title }}">Play</a> | Download:
+      <a data-play="{{ page.fileid }}" data-play-title="{{ page.title }}">Play</a> | Download:
       {% for type in site.audio_types %}
-        <a href="{{ page.id | prepend: site.audio_baseurl }}.{{ type.ext }}" target="_blank" class="download {{ type.ext }}">{{ type.name }}</a>
+        <a href="{{ page.fileid | prepend: site.audio_baseurl }}.{{ type.ext }}" target="_blank" class="download {{ type.ext }}">{{ type.name }}</a>
       {% endfor %}
     </div>
   </div>

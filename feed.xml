@@ -35,7 +35,7 @@ layout: null
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
         {% for type in site.audio_types %}
-          <enclosure url="{{ post.id | uri_escape | prepend: site.audio_baseurl }}.{{ type.ext }}" length="{{ post.length }}" type="{{ type.mime }}" />
+          <enclosure url="{{ post.fileid | uri_escape | prepend: site.audio_baseurl }}.{{ type.ext }}" length="{{ post.length }}" type="{{ type.mime }}" />
         {% endfor %}
       </item>
     {% endfor %}
