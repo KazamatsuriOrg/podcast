@@ -8,7 +8,7 @@ description: > # this means to ignore newlines until "baseurl:"
 link: "http://kazamatsuri.org/"
 
 # Audio source settings
-audio_baseurl: "http://d2qdztz5tk5zxi.cloudfront.net/podcast/"
+audio_baseurl: "https://kazamatsuri.s3.amazonaws.com/podcast/"
 audio_types:
   - name: MP3
     ext: mp3
