@@ -6,7 +6,6 @@ layout: null
   <channel>
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
-    <author>{{ site.author | xml_escape }}</author>
     <itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
     <itunes:subtitle>{{ site.subtitle | xml_escape }}</itunes:subtitle>
     <itunes:author>{{ site.author | xml_escape }}</itunes:author>
@@ -16,7 +15,7 @@ layout: null
     <itunes:category text="Arts">
         <itunes:category text="Visual Arts" />
     </itunes:category>
-    <itunes:image>{{ "/img/logo.jpg" | prepend: site.baseurl | prepend: site.url }}</itunes:image>
+    <itunes:image href="{{ "/img/logo.jpg" | prepend: site.baseurl | prepend: site.url }} " />
     <itunes:owner>
         <itunes:name>{{ site.owner_name | xml_escape }}</itunes:name>
         <itunes:email>{{ site.owner_email | xml_escape }}</itunes:email>
