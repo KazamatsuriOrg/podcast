@@ -15,7 +15,7 @@ layout: null
     <itunes:category text="Arts">
         <itunes:category text="Visual Arts" />
     </itunes:category>
-    <itunes:image href="{{ "/img/logo.jpg" | prepend: site.baseurl | prepend: site.url }} " />
+    <itunes:image href="{{ "/img/logo.jpg" | prepend: site.baseurl | prepend: site.url }}" />
     <itunes:owner>
         <itunes:name>{{ site.owner_name | xml_escape }}</itunes:name>
         <itunes:email>{{ site.owner_email | xml_escape }}</itunes:email>
