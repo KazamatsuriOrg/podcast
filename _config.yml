@@ -9,6 +9,7 @@ link: "http://kazamatsuri.org/"
 
 # Aspirety is Australian
 timezone: Australia/Sydney
+future: true
 
 # Audio source settings
 audio_baseurl: "http://kazamatsuri.s3.amazonaws.com/podcast/"
